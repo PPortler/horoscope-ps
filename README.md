@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Title
 
-## Getting Started
+Horoscope Animation UI สร้างจาก Next.js 16 + React 19
 
-First, run the development server:
+## Tools
+
+- Next.js 16 + React 19
+- Framer Motion (แอนิเมชั่น)
+- Tailwind CSS (ออกแบบ)
+- TypeScript
+
+## Install
+
+ต้องมี Node.js 18+
 
 ```bash
+git clone <repository-url>
+cd horoscope
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+เข้าไปที่ http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Command
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - เปิดโหมดพัฒนา
+- `npm run build` - เตรียมใช้จริง
+- `npm start` - ใช้จริง
+- `npm run lint` - ตรวจสอบโค้ด
 
-## Learn More
+## Folder
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── layout/
+│   │   └── Background.tsx
+│   ├── section/
+│   │   ├── FormSection.tsx
+│   │   └── HeroSection.tsx
+│   └── ui/
+│       ├── Candle.tsx
+│       └── MagicOrbStand.tsx
+├── lib/
+│   ├── motion.ts
+│   └── utils.ts
+└── styles/
+    └── globals.css
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ส่วนหลัก
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**HeroSection** - ส่วนแนะนำพร้อมแอนิเมชั่น
 
-## Deploy on Vercel
+**FormSection** - ฟอร์มดูดวง
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Background** - พื้นหลังเคลื่อนไหว
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Candle** - เทียน
+
+**MagicOrbStand** - ลูกแก้วประดับ
+
+## ปรับแต่ง
+
+แก้ไข `src/lib/motion.ts` เพื่อเปลี่ยนแอนิเมชั่น
+
+แก้ไข `src/styles/globals.css` หรือ components เพื่อเปลี่ยนสี
