@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
-import { fadeIn, fadeUp, scaleIn, slideInLeft } from "@/lib/motion";
+import { fadeUp, scaleIn, slideInLeft } from "@/lib/motion";
 
 function HeroSection() {
   return (
