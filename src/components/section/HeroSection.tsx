@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "framer-motion";
+import { fadeIn, fadeUp, scaleIn, slideInLeft } from "@/lib/motion";
 
 function HeroSection() {
   return (
@@ -6,24 +10,56 @@ function HeroSection() {
       className="flex flex-col items-center"
     >
       {/* Title */}
-      <h1 className="text-3xl lg:text-5xl font-normal text-center text-[#a88866]">คุณอยากถามเรื่องอะไร ?</h1>
+      <motion.h1
+        variants={slideInLeft(1)}
+        initial="hidden"
+        animate="visible"
+        className="text-3xl lg:text-5xl font-normal text-center text-[#a88866]"
+      >
+        คุณอยากถามเรื่องอะไร ?
+      </motion.h1>
 
       {/* Ornamental HR */}
       <div className="mt-5 relative w-[250px] lg:w-[400px] h-[2px]">
         {/* Main Line */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#a88866] to-transparent" />
+        <motion.div
+          variants={slideInLeft(1)}
+          initial="hidden"
+          animate="visible"
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-[#a88866] to-transparent"
+        />
         {/* TIP */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rotate-45 bg-[#a88866]" />
-        <div className="absolute left-[110px] lg:left-[185px] top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rotate-45 bg-[#a88866]" />
-        <div className="absolute right-[110px] lg:right-[185px] top-1/2 translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rotate-45 bg-[#a88866]" />
+        <motion.div
+          variants={scaleIn(1.3)}
+          initial="hidden"
+          animate="visible"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rotate-45 bg-[#a88866]"
+        />
+        <motion.div
+          variants={scaleIn(1.5)}
+          initial="hidden"
+          animate="visible"
+          className="absolute left-[110px] lg:left-[185px] top-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rotate-45 bg-[#a88866]"
+        />
+        <motion.div
+          variants={scaleIn(1.4)}
+          initial="hidden"
+          animate="visible"
+          className="absolute right-[110px] lg:right-[185px] top-1/2 translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rotate-45 bg-[#a88866]"
+        />
       </div>
 
       {/* Subtitle */}
-      <p className="mt-5 text-sm lg:text-lg text-center text-stone-500 ">
+      <motion.p 
+      variants={fadeUp(1.5)}
+      initial="hidden"
+      animate="visible"
+      className="mt-5 text-sm lg:text-lg text-center text-stone-500 "
+      >
         เลือกหัวข้อหรือพิมพ์คำถามที่คุณอยากรู้ในตอนนี้
-        <br/>
+        <br />
         หรือคุณจะข้ามขั้นตอนนี้ไปก่อนก็ได้
-        </p>
+      </motion.p>
     </section>
   )
 }

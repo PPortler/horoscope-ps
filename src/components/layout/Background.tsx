@@ -1,6 +1,6 @@
 "use client";
 
-import { fadeIn } from "@/lib/motion";
+import { fadeUp } from "@/lib/motion";
 import { motion } from "framer-motion"
 import Image from "next/image";
 import Candle from "../ui/Candle";
@@ -13,9 +13,6 @@ export function Background() {
       {/* Witch room background */}
       <motion.div
         className="absolute inset-0"
-        variants={fadeIn}
-        initial="hidden"
-        animate="visible"
       >
         <Image
           src="/images/bg-witch-room.png"
@@ -27,7 +24,12 @@ export function Background() {
         />
       </motion.div>
 
-      <div className="absolute bottom-[-300px] lg:bottom-[-200px] left-1/2 -translate-x-1/2">
+      <motion.div
+        variants={fadeUp(0.2)}
+        initial="hidden"
+        animate="visible"
+        className="absolute bottom-[-300px] lg:bottom-[-200px] left-1/2 -translate-x-1/2"
+      >
         <div className="relative w-[600px] h-[700px] lg:w-[1200px] lg:h-[700px]">
           {/* Table (base layer) */}
           <Image
@@ -36,17 +38,16 @@ export function Background() {
             fill
             className="object-contain"
           />
-
-          {/* MAGIC ORB (relative to table) */}
+          {/* Magic Orb Stand */}
           <MagicOrbStand className="absolute bottom-[60%] left-1/2 -translate-x-1/2" />
 
-          {/* LEFT CANDLE */}
+          {/* Left Candle */}
           <Candle className="absolute bottom-[60%] left-[12%] lg:bottom-[65%] lg:left-[20%]" />
 
-          {/* RIGHT CANDLE */}
+          {/* Right Candle */}
           <Candle className="absolute bottom-[60%] right-[12%] lg:bottom-[65%] lg:right-[20%]" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Gradient overlay */}
       {/* Top */}

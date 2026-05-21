@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { scaleIn } from "@/lib/motion";
 
 type CandleProps = {
   className?: string;
@@ -11,7 +12,12 @@ export default function Candle({
   className = "",
 }: CandleProps) {
   return (
-    <motion.div className={`absolute ${className} w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]`}>
+    <motion.div
+      variants={scaleIn(.5)}
+      initial="hidden"
+      animate="visible"
+      className={`absolute ${className} w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]`}
+    >
 
       {/* Candle Image */}
       <Image
@@ -30,6 +36,7 @@ export default function Candle({
           background:
             "radial-gradient(circle at 40% 30%, #fff7c2 0%, #ffb84d 40%, #ff6a00 75%, rgba(255,0,0,0.25) 100%)",
         }}
+        variants={scaleIn(.9)}
         animate={{
           scale: [1, 1.15, 0.95, 1],
           opacity: [0.7, 1, 0.8, 1],
@@ -53,6 +60,7 @@ export default function Candle({
           opacity: [0.8, 1, 0.7, 1],
           y: [0, -2, 0],
         }}
+        variants={scaleIn(1.3)}
         transition={{
           duration: 1.1,
           repeat: Infinity,
@@ -72,6 +80,7 @@ export default function Candle({
           scale: [1, 1.15, 0.95, 1],
           opacity: [0.7, 1, 0.8, 1],
         }}
+        variants={scaleIn(1.1)}
         transition={{
           duration: 1.3,
           repeat: Infinity,
