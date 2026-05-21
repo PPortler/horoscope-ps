@@ -1,11 +1,11 @@
 # ดูดวง - แอนิเมชั่น UI
 
-โปรเจกต์ Next.js 16 + React 19 สำหรับ Horoscope Animation UI
+โปรเจกต์ Next.js สำหรับ Horoscope Animation UI
 
 ## โปรเจกต์
 
 - **ชื่อ**: Horoscope Animation UI
-- **Frame**: Next.js 16 + React 19 + TypeScript
+- **Frame**: Next.js + TypeScript
 - **สไตล์**: Tailwind CSS
 - **แอนิเมชั่น**: Framer Motion
 

@@ -9,7 +9,7 @@ const prompt = Prompt({
 
 export const metadata: Metadata = {
   title: "Horoscope",
-  description: "Horoscope app built with Next.js 13 and TypeScript",
+  description: "Horoscope app built with Next.js and TypeScript",
 };
 
 export default function RootLayout({

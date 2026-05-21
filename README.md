@@ -1,10 +1,10 @@
 # Title
 
-Horoscope Animation UI สร้างจาก Next.js 16 + React 19
+Horoscope Animation UI สร้างจาก Next.js 
 
 ## Tools
 
-- Next.js 16 + React 19
+- Next.js 
 - Framer Motion (แอนิเมชั่น)
 - Tailwind CSS (ออกแบบ)
 - TypeScript
