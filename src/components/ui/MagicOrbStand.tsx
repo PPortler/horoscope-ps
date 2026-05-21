@@ -48,20 +48,6 @@ export default function MagicOrbStand({ className = "" }: Props) {
             priority
           />
 
-          {/* Ring 1 */}
-          <motion.div
-            className="absolute inset-0 rounded-full border-purple-300/60"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          />
-
-          {/* Ring 2 */}
-          <motion.div
-            className="absolute inset-0 rounded-full border-pink-300/50 scale-110"
-            animate={{ rotate: -360 }}
-            transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-          />
-
           {/* Glow ring */}
           <motion.div
             className="absolute inset-0 rounded-full bg-purple-500/10 blur-2xl scale-125"
@@ -86,7 +72,6 @@ export default function MagicOrbStand({ className = "" }: Props) {
           </motion.div>
         </motion.div>
       </motion.div>
-
 
     </div>
   );
