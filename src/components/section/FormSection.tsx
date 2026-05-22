@@ -44,7 +44,8 @@ function FormSection() {
           variants={scaleIn(2.1)}
           initial="hidden"
           animate="visible"
-          className="w-40 px-4 py-2 bg-[#526d2d] text-stone-100 font-medium rounded-3xl shadow border-4 border-[#ccb297] cursor-pointer hover:-translate-y-1 transition"
+          whileHover={{ y: -4 }}
+          className="w-40 px-4 py-2 bg-[#526d2d] text-stone-100 font-medium rounded-3xl shadow border-4 border-[#ccb297] cursor-pointer "
         >
           เริ่มเลือกไพ่
         </motion.button>
@@ -52,7 +53,8 @@ function FormSection() {
           variants={scaleIn(2.3)}
           initial="hidden"
           animate="visible"
-          className="w-40 px-4 py-2 bg-[#a88b61] text-stone-100 font-medium rounded-3xl shadow border-4 border-[#ccb297] cursor-pointer hover:-translate-y-1 transition"
+          whileHover={{ y: -4 }}
+          className="w-40 px-4 py-2 bg-[#a88b61] text-stone-100 font-medium rounded-3xl shadow border-4 border-[#ccb297] cursor-pointer"
         >
           ข้าม
         </motion.button>
