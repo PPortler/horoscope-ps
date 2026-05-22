@@ -62,7 +62,6 @@ export default function MagicOrbStand({ className = "" }: Props) {
             blur-xl
             lg:blur-3xl
             rounded-full
-            mix-blend-screen
             scale-[0.7]
             pointer-events-none
           "
@@ -94,7 +93,7 @@ export default function MagicOrbStand({ className = "" }: Props) {
           variants={orbMotion()}
           initial="hidden"
           animate="visible"
-          className="absolute left-1/2 -translate-x-1/2 bottom-[-18px] w-[300px] h-[300px] lg:bottom-[20px] lg:w-[450px] lg:h-[450px]"
+          className="absolute left-1/2 -translate-x-1/2 bottom-[-18px] w-[300px] h-[300px] lg:bottom-[20px] lg:w-[450px] lg:h-[450px] transform-gpu will-change-transform"
         >
           <Image
             src="/images/orb-item.png"
@@ -127,15 +126,15 @@ export default function MagicOrbStand({ className = "" }: Props) {
 
           {/* Glow ring */}
           <motion.div
-            className="absolute inset-0 rounded-full bg-purple-500/40 blur-xl lg:blur-3xl scale-30"
+            className="absolute inset-0 rounded-full bg-purple-500/40 blur-md lg:blur-2xl scale-30"
             variants={scaleIn(1)}
           />
           <motion.div
-            className="hidden lg:block absolute inset-0 rounded-full bg-purple-500/30 blur-3xl scale-50"
+            className="hidden lg:block absolute inset-0 rounded-full bg-purple-500/20 blur-2xl scale-50"
             variants={scaleIn(1.5)}
           />
           <motion.div
-            className="absolute inset-0 rounded-full bg-purple-500/10 lg:bg-purple-500/20 blur-xl lg:blur-3xl scale-150 "
+            className="absolute inset-0 rounded-full bg-purple-500/10 lg:bg-purple-500/10 blur-md lg:blur-2xl scale-150 "
             variants={scaleIn(2)}
           />
 

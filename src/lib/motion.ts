@@ -79,14 +79,11 @@ export const orbMotion = (delay = 0): Variants => ({
   hidden: {
     opacity: 0,
     y: 10,
-    scale: 0.98,
   },
 
   visible: {
     opacity: [0.75, 1, 0.85, 1, 0.8],
     y: [0, -8, 3, -6, 0],
-    scale: [1, 1.02, 0.99, 1.01, 1],
-    rotate: [-0.5, 0.5, -0.3, 0.3, 0],
 
     transition: {
       delay,
@@ -107,11 +104,11 @@ export const orbMotion = (delay = 0): Variants => ({
 export const magicMotion = (delay = 0): Variants => ({
   hidden: {
     opacity: 0,
-    scale: 0.95,
+    scale: 0.96,
   },
 
   visible: {
-    opacity: .5,
+    opacity: 0.45,
     scale: 1,
 
     transition: {
@@ -120,29 +117,30 @@ export const magicMotion = (delay = 0): Variants => ({
       ease: "easeOut",
     },
   },
-animate: {
-  rotate: 360,
-  y: [0, -6, 0],
-  scale: [1, 1.05, 1],
-  opacity: [0.2, 0.5, 0.2, 0.1, 0, 0.1, 0.2, 0.5, 0.3],
 
-  transition: {
-    rotate: {
-      duration: 20,
-      repeat: Infinity,
-      ease: "linear",
-    },
-    scale: {
-      duration: 3,
-      repeat: Infinity,
-      ease: "easeInOut",
-    },
-    opacity: {
-      duration: 10,
-      repeat: Infinity,
-      ease: "easeInOut",
-      times: [0, 0.1, 0.3, 0.45, 0.5, 0.55, 0.7, 0.9, 1],
+  animate: {
+    rotate: 360,
+    y: [0, -4, 0],
+    opacity: [0.2, 0.45, 0.2],
+
+    transition: {
+      rotate: {
+        duration: 24,
+        repeat: Infinity,
+        ease: "linear",
+      },
+
+      y: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+
+      opacity: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
     },
   },
-},
 });

@@ -16,7 +16,16 @@ export default function Candle({
       variants={scaleIn(.5)}
       initial="hidden"
       animate="visible"
-      className={`absolute ${className} w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]`}
+      className={`
+        absolute
+         ${className} 
+        w-[200px] 
+        h-[200px]
+         lg:w-[300px] 
+        lg:h-[300px] 
+        transform-gpu
+        will-change-transform`
+      }
     >
 
       {/* Candle Image */}
@@ -54,9 +63,9 @@ export default function Candle({
             inset-0
             bg-[#ff6a00]/10
             rounded-full
-            mix-blend-screen
             scale-[1]
-            blur-lg
+            blur-sm
+            lg:blur-lg
             pointer-events-none
           "
         variants={fadeIn(1)}
@@ -69,6 +78,8 @@ export default function Candle({
         style={{
           background:
             "radial-gradient(circle at 40% 30%, #fff7c2 0%, #ffb84d 40%, #ff6a00 75%, rgba(255,0,0,0.25) 100%)",
+          WebkitTransform: "translate3d(0,0,0)",
+          WebkitBackfaceVisibility: "hidden",
         }}
         variants={scaleIn(.9)}
         animate={{
@@ -89,6 +100,8 @@ export default function Candle({
         style={{
           background:
             "radial-gradient(circle at 40% 30%, #fff6b0 0%, #ffb347 35%, #ff6a00 70%, rgba(255,0,0,0.3) 100%)",
+          WebkitTransform: "translate3d(0,0,0)",
+          WebkitBackfaceVisibility: "hidden",
         }}
         animate={{
           scale: [1, 1.06, 0.98, 1],
@@ -110,6 +123,8 @@ export default function Candle({
         style={{
           background:
             "radial-gradient(circle at 40% 30%, #fff7c2 0%, #ffb84d 40%, #ff6a00 75%, rgba(255,0,0,0.25) 100%)",
+          WebkitTransform: "translate3d(0,0,0)",
+          WebkitBackfaceVisibility: "hidden",
         }}
         animate={{
           scale: [1, 1.06, 0.98, 1],
