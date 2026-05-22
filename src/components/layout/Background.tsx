@@ -39,7 +39,7 @@ export function Background() {
             className="object-contain"
           />
           {/* Magic Orb Stand */}
-          <MagicOrbStand className="absolute bottom-[60%] left-1/2 -translate-x-1/2" />
+          <MagicOrbStand className="absolute bottom-[60%] left-1/2 -translate-x-1/2 z-10" />
 
           {/* Left Candle */}
           <Candle className="absolute bottom-[60%] left-[12%] lg:bottom-[65%] lg:left-[20%]" />

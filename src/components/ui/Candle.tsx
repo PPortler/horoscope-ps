@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { scaleIn } from "@/lib/motion";
+import { fadeIn, scaleIn } from "@/lib/motion";
 
 type CandleProps = {
   className?: string;
@@ -25,6 +25,41 @@ export default function Candle({
         alt="candle"
         fill
         className="object-contain"
+      />
+
+      {/* Shadow */}
+      <motion.div
+        variants={fadeIn(.8)}
+        className="
+            absolute
+            bottom-[15px]
+            lg:bottom-[40px]
+            left-1/2
+            -translate-x-1/2
+            w-[40px]
+            h-[50px]
+            blur-md
+            lg:w-[70px]
+            lg:h-[50px]
+            lg:blur-md
+            bg-black/90
+            rounded-full
+          "
+      />
+
+      {/* Glow */}
+      <motion.div
+        className="
+            absolute
+            inset-0
+            bg-[#ff6a00]/10
+            rounded-full
+            mix-blend-screen
+            scale-[1]
+            blur-lg
+            pointer-events-none
+          "
+        variants={fadeIn(1)}
       />
 
       {/* Flame Left */}
