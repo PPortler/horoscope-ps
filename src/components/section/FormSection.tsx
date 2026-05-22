@@ -9,7 +9,7 @@ function FormSection() {
 
       {/* Input */}
       <motion.div
-        variants={fadeUp(1.7)}
+        variants={fadeUp(2.7)}
         initial="hidden"
         animate="visible"
         className="backdrop-blur-xl bg-black/70 border border-[#a88866] rounded-2xl px-6 py-4 shadow"
@@ -23,7 +23,7 @@ function FormSection() {
 
       {/* Tag */}
       <motion.div
-        variants={fadeUp(1.9)}
+        variants={fadeUp(2.9)}
         initial="hidden"
         animate="visible"
         className="mt-3 flex flex-wrap gap-2"
@@ -41,7 +41,7 @@ function FormSection() {
       {/* Button */}
       <div className="mt-5 flex gap-3 justify-center text-sm lg:text-md">
         <motion.button
-          variants={scaleIn(2.1)}
+          variants={scaleIn(3.1)}
           initial="hidden"
           animate="visible"
           whileHover={{ y: -4 }}
@@ -50,7 +50,7 @@ function FormSection() {
           เริ่มเลือกไพ่
         </motion.button>
         <motion.button
-          variants={scaleIn(2.3)}
+          variants={scaleIn(3.3)}
           initial="hidden"
           animate="visible"
           whileHover={{ y: -4 }}
