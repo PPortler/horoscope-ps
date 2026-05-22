@@ -69,21 +69,23 @@ export default function MagicOrbStand({ className = "" }: Props) {
           />
 
           {/* Magic */}
-          <motion.div
-            variants={magicMotion()}
-            initial="hidden"
-            animate={["visible", "animate"]}
-            className="absolute left-1/2 -translate-x-1/2 w-[120px] h-[120px] bottom-[90px] lg:bottom-[120px] lg:w-[200px] lg:h-[200px] "
-          >
-            <Image
-              src="/images/magic.png"
-              alt="magic"
-              fill
-              className="object-contain"
-              priority
-            />
+        
+            <motion.div
+              variants={magicMotion()}
+              initial="hidden"
+              animate={["visible", "animate"]}
+              className="absolute left-1/2 -translate-x-1/2 w-[120px] h-[120px] bottom-[90px] lg:bottom-[120px] lg:w-[200px] lg:h-[200px] "
+            >
+              <Image
+                src="/images/magic.png"
+                alt="magic"
+                fill
+                className="object-contain"
+                priority
+              />
+            </motion.div>
           </motion.div>
-        </motion.div>
+       
       </motion.div>
 
     </div>

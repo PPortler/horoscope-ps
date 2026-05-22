@@ -111,7 +111,7 @@ export const magicMotion = (delay = 0): Variants => ({
   },
 
   visible: {
-    opacity: 1,
+    opacity: .5,
     scale: 1,
 
     transition: {
@@ -120,29 +120,29 @@ export const magicMotion = (delay = 0): Variants => ({
       ease: "easeOut",
     },
   },
+animate: {
+  rotate: 360,
+  y: [0, -6, 0],
+  scale: [1, 1.05, 1],
+  opacity: [0.2, 0.5, 0.2, 0.1, 0, 0.1, 0.2, 0.5, 0.3],
 
-  animate: {
-    rotate: 360,
-    y: [0, -6, 0],
-    scale: [1, 1.05, 1],
-    opacity: [0.8, 1, 0.85],
-
-    transition: {
-      rotate: {
-        duration: 20,
-        repeat: Infinity,
-        ease: "linear",
-      },
-      scale: {
-        duration: 3,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-      opacity: {
-        duration: 2.5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
+  transition: {
+    rotate: {
+      duration: 20,
+      repeat: Infinity,
+      ease: "linear",
+    },
+    scale: {
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+    opacity: {
+      duration: 10,
+      repeat: Infinity,
+      ease: "easeInOut",
+      times: [0, 0.1, 0.3, 0.45, 0.5, 0.55, 0.7, 0.9, 1],
     },
   },
+},
 });
